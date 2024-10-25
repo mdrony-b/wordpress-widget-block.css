@@ -1,0 +1,125 @@
+/*=====================================
+ Wp Block widget Template CSS like Searchform, recent posts, recent commments, categories, tags
+========================================*/
+:root {
+  --text-color: #464646;
+  --primary-color: #faa307;
+  --text-while: #fff;
+  --gray-transparent: #f2f2f2;
+}
+.wp-block-heading {
+  background: var(--gray-transparent);
+  padding: 8px;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 5px;
+  margin-top: 25px;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+  list-style: none;
+  background: var(--gray-transparent);
+  padding: 8px;
+  margin: 5px 0px;
+  transition: 0.3s ease all;
+  position: relative;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li::after {
+  position: absolute;
+  content: "\279D";
+  right: 10px;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li:hover {
+  border-left: 5px solid var(--primary-color);
+  border-radius: 5px;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.widget {
+  /* background: var(--gray-transparent); */
+  margin: 15px 0px 0px 0px;
+  border-radius: 5px;
+}
+
+.tag-cloud-link {
+  margin: 3px 0px;
+}
+.tag-cloud-link,
+.wp-block-search__button {
+  background-clip: padding-box;
+  background-color: var(--gray-transparent);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  font-size: 16px !important;
+}
+
+.tag-cloud-link:hover,
+.wp-block-search__button:hover,
+.wp-block-search__button:focus,
+.tag-cloud-link:focus {
+  background-color: var(--primary-color);
+  color: var(--text-while);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.tag-cloud-link:hover,
+.wp-block-search__button:hover {
+  transform: translateY(-1px);
+}
+
+.tag-cloud-link:active,
+.wp-block-search__button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+.wp-block-categories {
+  list-style-type: none;
+  padding-left: 0 !important;
+}
+
+.cat-item a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.cat-item {
+  list-style: none;
+  background: var(--gray-transparent);
+  padding: 8px;
+  margin: 5px 0px;
+  transition: 0.3s ease all;
+  position: relative;
+}
+.cat-item:hover {
+  border-left: 5px solid var(--primary-color);
+  border-radius: 5px;
+}
+.cat-item::after {
+  position: absolute;
+  content: "\279D";
+  right: 10px;
+}
+.wp-block-latest-comments {
+  padding-left: 0 !important;
+}
+.has-avatars .wp-block-latest-comments__comment {
+  list-style: none;
+  min-height: 2.25em;
+  background: var(--gray-transparent);
+  padding: 10px;
+  border-radius: 5px;
+}
+.wp-block-latest-comments__comment-author,
+.wp-block-latest-comments__comment-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
